@@ -1,0 +1,89 @@
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .quiz-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .question-count,
+  .score-section {
+    margin-bottom: 20px;
+  }
+  
+  .question-text {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  
+  .answer-section button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #6200ed;
+    transition: all 0.3s ease;
+  }
+  
+  .answer-section button:hover {
+    filter: brightness(1.1);
+  }
+  
+  .score-section button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0077cc;
+    transition: all 0.3s ease;
+  }
+  
+  .score-section button:hover {
+    filter: brightness(1.1);
+  }
+  .answer-option {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .answer-option input {
+    margin-right: 10px;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px; /* Düğmeyi sorulardan biraz uzaklaştırır */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #6200ed;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    filter: brightness(1.1);
+  }
+  .answer-opt {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+  }
