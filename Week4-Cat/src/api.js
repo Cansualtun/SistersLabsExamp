@@ -1,4 +1,4 @@
-export async function fetchDogImage() {
+export async function fetchCatImage() {
   const apiKey = process.env.NEXT_PUBLIC_DOG_API_KEY;
   const response = await fetch("https://api.thecatapi.com/v1/images/search", {
     method: "GET",
