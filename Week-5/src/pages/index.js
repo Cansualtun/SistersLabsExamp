@@ -20,6 +20,7 @@ const HomePage = () => {
     } else {
       const updatedFavorites = [...currentFavorites, product];
       toast.success("Ürün başarıyla favorilere eklendi!");
+      getProducts();
       localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     }
   };
@@ -37,10 +38,16 @@ const HomePage = () => {
       setLoading(false);
     }
   };
+
+  // Favorilerde olup olmadığını kontrol eden fonksiyon
+  const checkIsFavorite = (product) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites"));
+    return favorites.some((favorite) => favorite.id === product.id);
+  };
+
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(products, "test");
 
   return (
     <div>
@@ -69,6 +76,8 @@ const HomePage = () => {
                   addToFavorites(product);
                 }}
                 product={product}
+                isFavorite={checkIsFavorite(product)}
+                detailAction={() => router.push(`${product.id}`)}
               />
             );
           })}
